@@ -1,2 +1,22 @@
-<h1>Users#show</h1>
-<%= current_user %>
+<h1>To do list for <%= current_user.email %> </h1>
+<br>
+
+<div class="col-md-4">
+    <%= link_to '<button type="button">New Item</button>'.html_safe, new_item_path %>
+</div>
+<br>
+
+<table>
+  <thead>
+    <tr>
+      <th> Item </th>
+    </tr>
+  </thead>
+  </tbody>
+    <tr>
+      <td>
+        <%= render @items %>
+      </td>
+    </tr>
+  </tbody>
+</table>
